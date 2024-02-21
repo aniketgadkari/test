@@ -1,4 +1,4 @@
-/*
+
 resource "aws_vpc_endpoint" "ec2" {
   vpc_endpoint_type  = "Interface"
   vpc_id             = var.vpcid
@@ -24,8 +24,8 @@ resource "aws_security_group" "epsg" {
   }
 
 }
-*/
 
+/*
 module "sec_grp" {
   source = "./modules/sgs"  
   cidr = "10.20.0.0/16"
@@ -37,3 +37,4 @@ module "end_point" {
   sg_id = toset([module.sec_grp.endpoint_sg_id])
   #sg_id = module.sec_grp.endpoint_sg_id
 }
+*/
